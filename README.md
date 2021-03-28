@@ -1,8 +1,8 @@
 # Games
 
-
   <details>
-  <summary><h3>List of Games</h3></summary><ul>
+  <summary>List of Games</summary>
+  <ul>
   <li><a href="#hurdle">Hurdle Race</li>
    <li><a href="#pong">Pong Game</li>
    <li><a href="#snake">Snake Game</li>
