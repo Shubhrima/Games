@@ -1,49 +1,52 @@
-import snake
-from food import Food
 from turtle import Screen
+from snake import Snake
+from food import Food
+from scoreboard import Scoreboard
 import time
-from score import Score
 
-game_on=True
-x=1.5
-food =Food()
-score= Score()
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.bgcolor("black")
+screen.title("My Snake Game")
+screen.tracer(0)
 
-screen=Screen()
-screen.setup(600,600)
-screen.bgcolor('black')
-screen.title('Snake Game')
+snake = Snake()
+food = Food()
+scoreboard = Scoreboard()
 
 screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
-def snake_move():
-    screen.onkey(fun=snake.up, key="Up")
-    screen.onkey(fun=snake.left, key="Left")
-    screen.onkey(fun=snake.right, key="Right")
-    screen.onkey(fun=snake.down, key="Down")
-
-while game_on:
-    time.sleep(0.1)
+game_is_on = True
+while game_is_on:
     screen.update()
-    if game_on==True:
-        snake_move()
+    time.sleep(0.1)
+    snake.move()
 
-    if snake.snake.distance(food)<=15:
+    #Detect collision with food.
+    if snake.head.distance(food) < 15:
         food.refresh()
-        snake.snake.resizemode("user")
-        x+=0.5
-        snake.snake.shapesize(stretch_len=x)
-        score.increase_score()
+        snake.extend()
+        scoreboard.increase_score()
 
-    if x==snake.snake.xcor():
-        snake.snake.color('red')
-        score.game_over()
-        game_on = False
+    #Detect collision with wall.
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        scoreboard.reset()
+        snake.reset()
 
-    if snake.snake.xcor() >= 275 or snake.snake.xcor()<=-275 or snake.snake.ycor()>=275 or snake.snake.ycor()<=-275:
-       snake.snake.color('red')
-       score.game_over()
-       game_on = False
+    #Detect collision with tail.
+    for segment in snake.segments:
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            scoreboard.reset()
+            snake.reset()
+
+
+
 
 
 screen.exitonclick()
