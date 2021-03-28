@@ -1,6 +1,6 @@
 # Games
 
-<h2>List of Games<h2>
+<h2>List of Games</h2>
   <ul>
   <li><a href="#hurdle">Hurdle Race</li>
    <li><a href="#pong">Pong Game</li>
