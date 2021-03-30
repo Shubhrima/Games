@@ -16,8 +16,8 @@
   
   <h4 id='country'>Guess the Country</h4>
   <p> Guess the name of the countries on the world map and score a point with every correct guess.</p>
-  <img src='https://user-images.githubusercontent.com/68013183/112927881-52983b00-9133-11eb-9553-fc40b09fae81.png' width='300'>
-  <img src="https://user-images.githubusercontent.com/68013183/112928153-bcb0e000-9133-11eb-8e3f-7b1c8efde599.png" width='300'>
+  <img src='https://user-images.githubusercontent.com/68013183/112927881-52983b00-9133-11eb-9553-fc40b09fae81.png' width='450'>
+  <img src="https://user-images.githubusercontent.com/68013183/112928153-bcb0e000-9133-11eb-8e3f-7b1c8efde599.png" width='450'>
 
 
 <h4 id="hurdle"> Hurdle Race</h4>
