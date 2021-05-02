@@ -12,13 +12,16 @@
   </details>
   <h4 id="pong"> Pong Game</h4>
   <p>Move the bars to hit the ball. The player who hits, scores :)</p>
-  <img src="Hit the Ball/Hit_the_ball.png" height="250">
+  <img src="https://github.com/Shubhrima/Games/blob/d6082fb747fc3b636b282fe607f5562f7d4e0199/Hit%20the%20Ball/Hit_the_ball.png" height="250">
   
   <h4 id='country'>Guess the Country</h4>
   <p> Guess the name of the countries on the world map and score a point with every correct guess.</p>
   <img src='Guess the Countries/blank.png' width='350'>
   <img src="Guess the Countries/guessed_countries.png" width='350'>
-
+  
+  <h4 id="bet">Betting Game</h4>
+  <p>Bet for the colored turtles, and see who wins.</p>
+  <img src="https://github.com/Shubhrima/Games/blob/d6082fb747fc3b636b282fe607f5562f7d4e0199/Try%20a%20Bet/Betting.png" width="350" alt=" ">
 
 <h4 id="hurdle"> Hurdle Race</h4>
 <p>Help the Turtle Cross the Road, without getting hit by a car.</p>
